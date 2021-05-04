@@ -35,4 +35,4 @@ const petrolStationSchema = new mongoose.Schema({
 
 });
 
-module.exports = mongoose.model("users", petrolStationSchema);
+module.exports = mongoose.model("petrolStations", petrolStationSchema);
