@@ -18,7 +18,7 @@ const petrolStationSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    profilePic: {
+    displayPicture: {
         type: String,
         required: true
     },
