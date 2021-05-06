@@ -1,5 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
+import FormComponent from '../components/FormComponent';
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
@@ -17,6 +18,8 @@ const Tab1: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <ExploreContainer name="Tab 1 page" />
+        <FormComponent title = "Email" />
+        <FormComponent title = "Password" />
       </IonContent>
     </IonPage>
   );
