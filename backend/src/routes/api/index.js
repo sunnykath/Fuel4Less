@@ -4,10 +4,10 @@ const router = express.Router();
 
 // TODO: Implement Routing
 
-// import articles from './articles';
-// router.use('/articles', articles);
+import users from './users';
+router.use('/users', users);
 
-// import images from './images';
-// router.use('/images', images);
+import petrolStation from './petrol-stations';
+router.use('/stations', petrolStation);
 
 export default router;
