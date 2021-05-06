@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import { List } from '@material-ui/core';
+
+import SimpleList from './ListComponent';
 
 function App() {
   return (
@@ -9,6 +12,11 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <List>
+          "hello"
+        </List>
+        <SimpleList>
+        </SimpleList>
         <a
           className="App-link"
           href="https://reactjs.org"
