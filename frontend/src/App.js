@@ -3,29 +3,38 @@ import './App.css';
 import { List } from '@material-ui/core';
 
 import SimpleList from './ListComponent';
+import { Redirect, Route, Switch } from 'react-router';
+import SignInPage from './SignInPage';
+import DashboardPage from './DashboardPage';
+import MapsPage from './MapsPage';
+import NavBar from './NavBar';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <List>
-          "hello"
-        </List>
-        <SimpleList>
-        </SimpleList>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+
+      <Switch>
+        <Route path="/signIn">
+          <SignInPage />
+
+        </Route>
+
+        <Route path="/dashboard">
+          <DashboardPage  />
+        </Route>
+
+        <Route path="/maps">
+          <MapsPage />
+        </Route>
+
+        {/* If no other path matches, redirect to /articles */}
+        <Route path="*">
+          <Redirect to="/signIn" />
+        </Route>
+      </Switch>
+
     </div>
   );
 }
