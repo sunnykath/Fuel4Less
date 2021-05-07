@@ -2,12 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 import { List } from '@material-ui/core';
 
-import SimpleList from './ListComponent';
 import { Redirect, Route, Switch } from 'react-router';
-import SignInPage from './SignInPage';
-import DashboardPage from './DashboardPage';
-import MapsPage from './MapsPage';
-import NavBar from './NavBar';
+import SignInPage from './Pages/SignInPage';
+import DashboardPage from './Pages/DashboardPage';
+import MapsPage from './Pages/MapsPage';
+
 
 function App() {
 
@@ -22,7 +21,7 @@ function App() {
         </Route>
 
         <Route path="/dashboard">
-          <DashboardPage  />
+          <DashboardPage />
         </Route>
 
         <Route path="/maps">
