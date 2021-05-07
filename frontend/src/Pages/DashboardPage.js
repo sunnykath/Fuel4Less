@@ -1,8 +1,9 @@
 import { List } from "@material-ui/core";
-import SimpleList from "./ListComponent";
-import NavBar from "./NavBar";
+import SimpleList from "../Components/ListComponent";
+import NavBar from "../Components/NavBar";
 
 export default function DashboardPage() {
+    
     return(
         <div className="DashboardPage">
             <nav>
