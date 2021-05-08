@@ -3,7 +3,8 @@ import './App.css';
 import { List } from '@material-ui/core';
 
 import { Redirect, Route, Switch } from 'react-router';
-import SignInPage from './Pages/SignInPage';
+import LogInPage from './Pages/LogInPage.js'
+import SignUpPage from './Pages/SignUpPage'
 import DashboardPage from './Pages/DashboardPage';
 import MapPage from './Pages/MapsPage';
 
@@ -15,9 +16,12 @@ function App() {
       
 
       <Switch>
-        <Route path="/signIn">
-          <SignInPage />
+        <Route path="/logIn">
+          <LogInPage />
+        </Route>
 
+        <Route path="/signUp">
+          <SignUpPage />
         </Route>
 
         <Route path="/dashboard">
@@ -30,7 +34,7 @@ function App() {
 
         {/* If no other path matches, redirect to /articles */}
         <Route path="*">
-          <Redirect to="/signIn" />
+          <Redirect to="/logIn" />
         </Route>
       </Switch>
 
