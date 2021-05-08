@@ -1,6 +1,6 @@
 import NavBar from "../Components/NavBar";
-import React, { Component, useState, useEffect } from 'react';
-import { Map, Marker, GoogleMap, withScriptjs, withGoogleMap, GoogleApiWrapper, HandleGoogleMap } from "google-maps-react";
+import React, { useState, useEffect } from 'react';
+import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
 
 function MapsPage(props) { 
    
@@ -22,7 +22,7 @@ function MapsPage(props) {
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(success);
     })
-   
+  
     return (
         <div className="MapsPage">
             <nav>
@@ -38,11 +38,15 @@ function MapsPage(props) {
                     lng: currentPosition.lng
                 }
             }
-            />
-            <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
-            position={{lat: currentPosition.lat, lng: currentPosition.lng}} />
+      
+            onGoogleApiLoaded={({ map, maps }) => this.renderMarker(map, maps)}
+            >
+              <Marker
+              title={'The marker`s title will appear as a tooltip.'}
+              name={'MY HOUSE'}
+              position={{lat: currentPosition.lat, lng: currentPosition.lng}} />
+            </Map>
+    
       </div>
     )
 }
