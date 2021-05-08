@@ -22,7 +22,7 @@ function MapsPage(props) {
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(success);
     })
-
+  
     return (
         <div className="MapsPage">
             <nav>
@@ -38,6 +38,7 @@ function MapsPage(props) {
                     lng: currentPosition.lng
                 }
             }
+      
             onGoogleApiLoaded={({ map, maps }) => this.renderMarker(map, maps)}
             >
               <Marker
@@ -45,7 +46,7 @@ function MapsPage(props) {
               name={'MY HOUSE'}
               position={{lat: currentPosition.lat, lng: currentPosition.lng}} />
             </Map>
-            
+    
       </div>
     )
 }
