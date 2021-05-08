@@ -2,13 +2,13 @@
  * A RESTful API for dealing with petrol-stations.
  */
 
- import express from 'express';
+import express from 'express';
 
  
- // Import the DAO from app-data
+//  Import the DAO from app-data
   import {
      createPetrolStation,
-     retrievePetrolStation,
+     retrievePetrolStationById,
      retrievePetrolStationList,
      updatePetrolStation,
      deletePetrolStation
@@ -50,7 +50,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     const { id } = req.params;
 
-    const petrolStation = await retrievePetrolStation(id);
+    const petrolStation = await retrievePetrolStationById(id);
 
     if (petrolStation) {
         res.json(petrolStation);

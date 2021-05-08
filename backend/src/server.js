@@ -6,6 +6,10 @@ import mongoose from 'mongoose';
 const app = express();
 const port = process.env.PORT || 3001;
 
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+
 // Setup body-parser
 app.use(express.json());
 
@@ -30,5 +34,5 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Start the DB running. Then, once it's connected, start the server.
-mongoose.connect('mongodb://localhost:27017/blogogog', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/f4l', { useNewUrlParser: true })
     .then(() => app.listen(port, () => console.log(`App server listening on port ${port}!`)));
