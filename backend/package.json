@@ -33,6 +33,7 @@
     "mime": "^1.6.0",
     "mime-db": "^1.47.0",
     "mime-types": "^2.1.30",
+    "mongoose": "^5.12.7",
     "ms": "^2.0.0",
     "negotiator": "^0.6.2",
     "on-finished": "^2.3.0",
@@ -52,6 +53,7 @@
     "type-is": "^1.6.18",
     "unpipe": "^1.0.0",
     "utils-merge": "^1.0.1",
+    "validator": "^13.6.0",
     "vary": "^1.1.2"
   },
   "scripts": {
