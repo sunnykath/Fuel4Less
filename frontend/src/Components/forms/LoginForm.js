@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import {Button, Input, TextField} from "@material-ui/core";
+
+import { NavLink } from 'react-router-dom';
 import "./LoginForm.css"
 
 
@@ -33,6 +35,7 @@ function LoginForm(params) {
             type="text"
             style={{margin: 10}}
           />
+          
           <TextField
             label="Password"
             id="password"
@@ -44,9 +47,12 @@ function LoginForm(params) {
             style={{margin: 10}}
           />
 
-          <Button className="logInButton" variant="contained" color="secondary" disabled={(password && email) ? 0: 1} onClick={() => { console.log(email,password) }}/*className="form__custom-button"*/>
-            Log in
-          </Button>
+          <NavLink to={(password && email) ? "/maps" : 0}>
+            <Button className="logInButton" variant="contained" color="secondary" disabled={(password && email) ? 0: 1} onClick={() => { console.log(email,password) }}/*className="form__custom-button"*/>
+              Log in
+            </Button>
+          </NavLink>          
+         
 
         </form>
       </div>
