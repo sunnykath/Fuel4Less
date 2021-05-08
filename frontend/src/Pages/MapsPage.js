@@ -1,6 +1,10 @@
 import NavBar from "../Components/NavBar";
+import React, { useState, useEffect } from 'react';
+import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
 
-export default function MapsPage() {
+function MapsPage(props) { 
+   
+    const [ currentPosition, setCurrentPosition ] = useState({});
 
     const mapStyles = {
         width: '100%',
@@ -22,7 +26,7 @@ export default function MapsPage() {
     return (
         <div className="MapsPage">
             <nav>
-                <NavBar />
+              <NavBar />
             </nav>
             <Map
             google={props.google}
