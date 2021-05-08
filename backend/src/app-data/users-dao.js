@@ -34,3 +34,11 @@ async function updateUser(user) {
 async function deleteUser(id) {
     await users.deleteOne({_id: id});
 }
+
+export{
+    createUser,
+    retrieveUserList,
+    retrieveUser,
+    updateUser,
+    deleteUser
+}

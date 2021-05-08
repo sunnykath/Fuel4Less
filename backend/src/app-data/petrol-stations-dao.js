@@ -33,3 +33,10 @@ async function updatePetrolStation(petrolStation) {
 
     return false;
 }
+
+export{
+    createPetrolStation,
+    retrievePetrolStationList,
+    retrievePetrolStationById,
+    updatePetrolStation
+}
