@@ -1,17 +1,11 @@
-import { Button, List, ListItem, ListItemText, SwipeableDrawer } from '@material-ui/core';
-import React from 'react';
-import { useState } from 'react';
+import { Button, List, ListItem, ListItemText, IconButton, SwipeableDrawer } from '@material-ui/core';
+import MenuIcon from "@material-ui/icons/Menu"
+import React, { useState }  from 'react';
+
 import { NavLink } from 'react-router-dom';
 import styles from './NavBar.module.css';
 
 export default function NavBar() {
-/* <div className={styles.navBar}>
-            <NavLink to="/signIn" activeClassName={styles.activeLink}>Sign In</NavLink>
-            <NavLink to="/dashboard" activeClassName={styles.activeLink}>Dashboard</NavLink>
-            <NavLink to="/maps" activeClassName={styles.activeLink}>Map</NavLink>
-        </div> */
-
-        //{list(anchor)}
 
 
     const [open, setOpen] = useState(false);
@@ -24,7 +18,9 @@ export default function NavBar() {
         };
     return (
         <div>
-            <Button onClick={toggleDrawer(true)}>NavDrawer</Button>
+            <IconButton onClick={toggleDrawer(true)}>
+                <MenuIcon/ >
+            </IconButton>
             <SwipeableDrawer
                 anchor={'left'}
                 open={open}
@@ -32,9 +28,10 @@ export default function NavBar() {
                 onOpen={toggleDrawer(true)}
                 onClick={toggleDrawer(false)}
                 >
-                <NavLink to="/signIn" activeClassName={styles.activeLink}>Sign In</NavLink>
+                <NavLink to="/logIn" activeClassName={styles.activeLink}>Log In</NavLink>
                 <NavLink to="/dashboard" activeClassName={styles.activeLink}>Dashboard</NavLink>
                 <NavLink to="/maps" activeClassName={styles.activeLink}>Map</NavLink>
+                <NavLink to="/signUp" activeClassName={styles.activeLink}>Sign Up</NavLink>
             </SwipeableDrawer>
         </div>
     );
