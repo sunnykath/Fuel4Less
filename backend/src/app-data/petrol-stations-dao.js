@@ -33,3 +33,15 @@ async function updatePetrolStation(petrolStation) {
 
     return false;
 }
+
+async function deletePetrolStation(id) {
+    await petrolStations.deleteOne({ _id: id });
+}
+
+export {
+    createPetrolStation,
+    retrievePetrolStationList,
+    retrievePetrolStationById,
+    updatePetrolStation,
+    deletePetrolStation
+}
