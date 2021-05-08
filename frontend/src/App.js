@@ -5,7 +5,7 @@ import { List } from '@material-ui/core';
 import { Redirect, Route, Switch } from 'react-router';
 import SignInPage from './Pages/SignInPage';
 import DashboardPage from './Pages/DashboardPage';
-import MapsPage from './Pages/MapsPage';
+import MapPage from './Pages/MapsPage';
 
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
         </Route>
 
         <Route path="/maps">
-          <MapsPage />
+          <MapPage />
         </Route>
 
         {/* If no other path matches, redirect to /articles */}
