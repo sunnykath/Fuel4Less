@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import {Button, Input, TextField} from "@material-ui/core";
+import axios from 'axios';
+import DropdownComponent from "./DropdownComponent";
 
 function DashboardForm(params) {
 
@@ -9,6 +11,9 @@ function DashboardForm(params) {
       <div>
         <form className="form">
           
+          <DropdownComponent>
+          </DropdownComponent>
+
           <TextField
             label="Update Price"
             id="price"
@@ -20,9 +25,6 @@ function DashboardForm(params) {
           <Button className="updatePriceButton" variant="contained" color="secondary" onClick={() => { console.log(price) }}>
               Confirm Price
           </Button>
-
-                 
-         
 
         </form>
       </div>
