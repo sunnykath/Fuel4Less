@@ -1,26 +1,31 @@
 import React, { useState } from "react";
 import {Button, Input, TextField} from "@material-ui/core";
+import axios from 'axios';
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import "./LoginForm.css"
 
 
 
 function LoginForm(params) {
 
-
   const [userName, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const [user, setUser] = useState("");
+  const [success, setSuccess] = useState(0);
   
   function authenticateUser() {
 
-    // Run a database query for email
-    
+    // Run a database query for username
+    axios.get("http://localhost:3001/api/users/?username=" + userName)
+    .then(res => setUser(res.data[0]));
 
     // Check Password
-
-    // Redirect to Admin DashBoard
+    if (user) {
+      setSuccess(user.password == password);
+    } else {
+      setSuccess(0);
+    }
     
   }
 
@@ -53,7 +58,7 @@ function LoginForm(params) {
             style={{margin: 10}}
           />
 
-          <NavLink to={(password && userName) ? "/maps" : 0}>
+          <NavLink to={(success) ? "/maps" : 0}>
             <Button className="logInButton" variant="contained" color="secondary" 
             disabled={(password && userName) ? 0: 1} onClick={() => authenticateUser()}>
               Log in
