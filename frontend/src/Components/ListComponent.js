@@ -12,6 +12,7 @@ import axios from 'axios';
 const useStyles = makeStyles({
   root: {
     display: 'flex',
+    alignItems: "center",
   },
   title: {
     fontSize: 20,
@@ -32,11 +33,11 @@ const useStyles = makeStyles({
   },
   media: {
     height: 100,
-    width: 100,
+    width: 80,
   },
   icon: {
-    height: 40,
-    width: 40,
+    height: 30,
+    width: 30,
   },
 });
 
@@ -45,7 +46,7 @@ function ListComponent({items}) {
   
   return(
     items ? items.map((item, index) =>
-      <div key={index}>
+      <div key={index} style={{paddingBottom:20}}>
         <Card className={classes.root} variant="outlined" >
           <CardMedia className={classes.media}
               image={"http://localhost:3000/" + item.displayPicture}
@@ -54,10 +55,10 @@ function ListComponent({items}) {
           <div className={classes.details}> 
           <CardContent >
           
-            <Typography className={classes.title} variant="h5" component="h2" align="left">
+            <Typography className={classes.title} variant="h7" component="h2" align="left">
               {item.name}
             </Typography>
-            <Typography className={classes.pos} variant="h5" component="h2" align="left" color="textSecondary">
+            <Typography className={classes.pos} variant="h4" component="h2" align="left" color="textSecondary">
               ${item.price}
             </Typography>
             <div className={classes.iconDisplay} > 
