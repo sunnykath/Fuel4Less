@@ -7,7 +7,7 @@ function MapComponent(props) {
 
     const mapStyles = {
         width: '100%',
-        height: '50%'
+        height: '100%'
       };
 
     const success = position => {
@@ -23,7 +23,7 @@ function MapComponent(props) {
     })
 
     return (
-        <div className="MapsPage">
+        <div className="MapsPage" style={{ position: 'relative', width: '80w', height: '50vh' }}>
             <Map
             google={props.google}
             zoom={12}
