@@ -6,12 +6,12 @@ import express from 'express';
 
  
 //  Import the DAO from app-data
-  import {
-     createPetrolStation,
-     retrievePetrolStationById,
-     retrievePetrolStationList,
-     updatePetrolStation,
-     deletePetrolStation
+import {
+    createPetrolStation,
+    retrievePetrolStationById,
+    retrievePetrolStationList,
+    updatePetrolStation,
+    deletePetrolStation
  } from '../../app-data/petrol-stations-dao';
  
 
@@ -41,7 +41,6 @@ router.post('/', async (req, res) => {
 
 // Retrieve all petrol stations
 router.get('/', async (req, res) => {
-
     res.json(await retrievePetrolStationList());
 
 });

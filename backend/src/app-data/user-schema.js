@@ -23,10 +23,10 @@ const userSchema = new mongoose.Schema({
         type: String,
     },
 
-    canUpdatePrice: {
-        type: Boolean,
-        required: true
-    },
+    // canUpdatePrice: {
+    //     type: Boolean,
+    //     // required: true
+    // },
 
     petrolStations: {
         type: [String]
