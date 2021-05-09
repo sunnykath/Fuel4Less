@@ -16,7 +16,7 @@ async function retrieveUser(id) {
 }
 
 async function retrieveUserByUserName(username) {
-    return await users.find({username: username});
+    return await users.findOne({username: username.value});
 }
 
 async function updateUser(user) {

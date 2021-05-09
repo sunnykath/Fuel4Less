@@ -12,14 +12,16 @@ function LoginForm(params) {
 
   const [userName, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const [user, setUser] = useState("");
   
   function authenticateUser() {
 
     // Run a database query for username
-    const user = await axios.get()
-    // Check Password
+    const setUser = axios.get("http://localhost:3001/" + userName)
+                    .then(res => {console.log(res)});
 
+    // Check Password
+    
     // Redirect to Admin DashBoard
     
   }
