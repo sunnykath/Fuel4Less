@@ -1,29 +1,20 @@
-import connectToDatabase from '../../../app-data/dbConnect';
 import mongoose from 'mongoose';
-import routes from '../petrol-stations';
 import { MongoMemoryServer } from 'mongodb-memory-server';
-import express from 'express';
-import axios from 'axios';
-import { petrolStations } from '../../../app-data/petrol-stations-schema';
+import { petrolStations } from '../petrol-stations-schema';
 
-let mongod, app, server;
+let mongod;
 let petrolStation1, petrolStation2, petrolStation3;
 
-beforeAll(async done => {
-
+beforeAll(async () => {
     mongod = new MongoMemoryServer();
-
+    
     const connectionString = await mongod.getUri();
     await mongoose.connect(connectionString, { useNewUrlParser: true });
-
-    app = express();
-    app.use('/', routes);
-    server = app.listen(3001, () => done());
-
 });
 
 
 beforeEach(async () => {
+    const coll = await mongoose.connection.db.createCollection('petrolStations');
     petrolStation1 = {
         price: 10,
         address: ['address1', 'Auckland', 1, 2, 1000],
@@ -51,41 +42,28 @@ beforeEach(async () => {
         discount: 3
     };
 
-    const dbPetrolStation = new petrolStations(petrolStation1);
-    petrolStation1._id = dbPetrolStation._id;
-    dbPetrolStation.save();
-
-    const dbPetrolStation2 = new petrolStations(petrolStation2);
-    petrolStation2._id = dbPetrolStation2._id;
-    dbPetrolStation2.save();
-
-    const dbPetrolStation3 = new petrolStations(petrolStation3);
-    petrolStation3._id = dbPetrolStation3._id;
-    dbPetrolStation3.save();
+    await coll.insertMany([petrolStation1, petrolStation2, petrolStation3]);
 });
 
 /**
  * After each test, clear the database entirely
  */
  afterEach(async () => {
-    await petrolStations.deleteMany({});
+    await mongoose.connection.db.dropCollection('petrolStations');
 });
 
-afterAll(done => {
-    server.close(async () => {
-        await mongoose.disconnect();
-        await mongod.stop();
 
-        done();
-    });
+afterAll(async () => {
+    await mongoose.disconnect();
+    await mongod.stop();
 });
+
 
 it('gets all petrolstations', async () => {
    
-    const response = await axios.get('http://localhost:3001/api/stations');
-    const petrolstation = response.data;
-    
+    const petrolstation = await petrolStations.find();
     expect(petrolstation).toBeTruthy();
+
     expect(petrolstation.length).toBe(3);
 
     expect(petrolstation[0].price).toBe(10);
@@ -128,8 +106,7 @@ it('gets all petrolstations', async () => {
 
 it('gets a single petrolstation', async () => {
 
-    const response = await axios.get(`http://localhost:3000/breakfasts/${petrolStation2._id}`);
-    const petrolstation = response.data;
+    const petrolstation = await petrolStations.findById(petrolStation2._id);
 
     expect(petrolstation.price).toBe(20);
     expect(petrolstation.address[0]).toBe('address2');
@@ -155,6 +132,19 @@ it('adds a petrolstation without crashing', async () => {
         amenities: [true, false, true]
     });
 
-    const response = await axios.post("http://localhost:3001/create/", petrolstaion);
-    expect(response.status).toBe(201);
+    await petrolstation.save();
+
+    const fromDB =  await mongoose.connection.db.collection('petrolStations').findOne({ _id: petrolstation._id });
+    expect(fromDB).toBeTruthy();
+    expect(fromDB.price).toBe(10);
+    expect(fromDB.address[0]).toBe('address1');
+    expect(fromDB.address[1]).toBe('Auckland');
+    expect(fromDB.address[2]).toBe(1);
+    expect(fromDB.address[3]).toBe(2);
+    expect(fromDB.address[4]).toBe(1000);
+    expect(fromDB.displayPicture).toBe('logo1.jpg');
+    expect(fromDB.discount).toBe(1);
+    expect(fromDB.amenities[0]).toBe(true);
+    expect(fromDB.amenities[1]).toBe(false);
+    expect(fromDB.amenities[2]).toBe(true);
 });
