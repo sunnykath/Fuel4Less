@@ -1,23 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
+import { List } from '@material-ui/core';
+
+import { Redirect, Route, Switch } from 'react-router';
+import LogInPage from './Pages/LogInPage.js'
+import SignUpPage from './Pages/SignUpPage'
+import DashboardPage from './Pages/DashboardPage';
+import MapPage from './Pages/MapsPage';
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+
+      <Switch>
+        <Route path="/logIn">
+          <LogInPage />
+        </Route>
+
+        <Route path="/signUp">
+          <SignUpPage />
+        </Route>
+
+        <Route path="/dashboard">
+          <DashboardPage />
+        </Route>
+
+        <Route path="/maps">
+          <MapPage />
+        </Route>
+
+        {/* If no other path matches, redirect to /articles */}
+        <Route path="*">
+          <Redirect to="/maps" />
+        </Route>
+      </Switch>
+
     </div>
   );
 }

@@ -1,0 +1,20 @@
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    text-decoration: none;
+}
+
+.navBar > a {
+    background-color: transparent;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+}
+
+.navBar > a.activeLink {
+    background-color: lightblue;
+    font-weight: bold;
+    text-decoration: none;
+}
