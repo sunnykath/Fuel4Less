@@ -15,6 +15,8 @@ app.use(express.json());
 
 // Setup our routes.
 import routes from './routes';
+import connectToDatabase from './app-data/dbConnect';
+
 app.use('/', routes);
 
 // Make the "public" folder available statically
@@ -32,6 +34,9 @@ if (process.env.NODE_ENV === 'production') {
         res.sendFile(path.join(__dirname, '../../frontend/build/index.html'));
     });
 }
+
+connectToDatabase()
+    .then(() => app.listen(port, () => console.log(`App server listening on port ${port}!`)));
 
 // Start the DB running. Then, once it's connected, start the server.
 mongoose.connect('mongodb://localhost:27017/f4l', { useNewUrlParser: true })
