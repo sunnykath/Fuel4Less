@@ -18,7 +18,7 @@ function DashboardForm(params) {
             label="Update Price"
             id="price"
             onChange={(e) => {setPrice(e.target.value)}}
-            type="text"
+            type="number"
             style={{margin: 10}}
           />
 

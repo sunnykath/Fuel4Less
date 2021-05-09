@@ -10,7 +10,6 @@
      createUser,
      retrieveUser,
      retrieveUserList,
-     retrieveUserByUserName,
      updateUser,
      deleteUser
  } from '../../app-data/users-dao';

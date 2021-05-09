@@ -26,6 +26,8 @@ export default function NavBar() {
                 <IconButton onClick={toggleDrawer(true)} edge="start">
                 <MenuIcon/ >
             </IconButton>
+            
+            <h2 style={{color: "red", alignSelf: "center" }}> Fuel 4 Less</h2>
             </div>
             
             <SwipeableDrawer

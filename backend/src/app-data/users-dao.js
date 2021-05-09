@@ -39,7 +39,6 @@ export {
     createUser,
     retrieveUser,
     retrieveUserList,
-    retrieveUserByUserName,
     updateUser,
     deleteUser
 }

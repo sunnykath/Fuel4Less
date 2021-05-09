@@ -16,8 +16,8 @@ export default function LogInPage() {
             <nav>
                 <NavBar />
             </nav>
-            <h1> Fuel 4 Less</h1>
-            <h2> Admin Log In</h2>
+            {/* <h1> Fuel 4 Less</h1> */}
+            <h2 style={{color: "blue"}}> Admin Log In</h2>
             <LoginForm/>
             <NavLink to="/signUp">
                 <Button className="button" variant="contained" color="primary">

@@ -79,33 +79,6 @@ export default function MapPage() {
     return d;
   };
 
-  /* axios.get("http://localhost:3001/api/stations")
-  .then(res => {
-    const listStation = res.data
-    console.log({ listStation });
-  })
-
-/*   axios.get("http://localhost:3001/api/stations")
-  .then(res => setList(res.data));
-
-console.log({ listStation });
-//const latLngA = ;
-//google.maps.geometry.spherical.computeDistanceBetween();
-
-//const currentPos = [{lat: 0,long: 0}];
-/* var i, j, min_idx, temp;
-
-for (i = 0; i < callbackArray.length - 1; i++) {
-  min_idx = i;
-  for (j = i+1; j < callbackArray.length; j++){
-      if (callbackArray[j].lat < callbackArray[min_idx].lat){ //calculate distance and compare to min distance
-          min_idx = j;
-      }
-    }
-  temp = callbackArray[min_idx];
-  callbackArray[min_idx] = callbackArray[i];
-  callbackArray[i] = temp;
-  } */
 
 const success = position => {
   const currentPosition = {
@@ -120,6 +93,8 @@ const success = position => {
         <nav>
             <NavBar />
         </nav>
+        
+        <h2 style={{color: "red"}}> Closest Cheap Petrol Stations</h2>
         <Box
         display="flex"
         flexWrap="wrap"
@@ -138,7 +113,7 @@ const success = position => {
         bottom="true"
       >
           <Box p={1} flexGrow={1}>
-               <ListComponent items = {listStation.slice(0,5)}/>
+               <ListComponent items = {listStation}/>
           </Box>
            
         </Box>
