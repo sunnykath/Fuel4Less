@@ -24,7 +24,7 @@ import {
 
 
 // Add a new petrol station
-router.post('/', async (req, res) => {
+router.post('/create', async (req, res) => {
     const newPetrolStation = await createPetrolStation({
         name: req.body.name,
         price: req.body.price,

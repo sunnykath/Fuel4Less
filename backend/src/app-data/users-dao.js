@@ -7,8 +7,8 @@ async function createUser(user) {
     return dbUser;
 }
 
-async function retrieveUserList() {
-    return await users.find();
+async function retrieveUserList(query) {
+    return await users.find(query);
 }
 
 async function retrieveUser(id) {
@@ -39,6 +39,7 @@ export {
     createUser,
     retrieveUser,
     retrieveUserList,
+    retrieveUserByUserName,
     updateUser,
     deleteUser
 }

@@ -1,37 +1,48 @@
 import React, { useState } from "react";
 import {Button, Input, TextField} from "@material-ui/core";
+import axios from 'axios';
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import "./LoginForm.css"
 
 
-// import "./styles.css";
-// import CustomInput from "./components/CustomInput";
-// import Button from "./components/Button";
-
-// export default class LoginForm extends Component {
 
 function LoginForm(params) {
 
-
-  const [email, setEmail] = useState("");
+  const [userName, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [user, setUser] = useState("");
+  const [success, setSuccess] = useState(0);
+  
+  function authenticateUser() {
 
-  // handleChange = e => {
-  //   this.setcredentials({ [e.currentTarget.id]: e.currentTarget.value });
-  // };
+    // Run a database query for username
+    axios.get("http://localhost:3001/api/users/?username=" + userName)
+    .then(res => setUser(res.data[0]));
+
+    // Check Password
+    if (user) {
+      setSuccess(user.password == password);
+    } else {
+      setSuccess(0);
+    }
+    
+  }
+
+
+  
 
     return (
       <div>
         <form className="form">
           
           <TextField
-            label="Email"
-            id="email"
+            label="Usernmae"
+            id="username"
             // formControlProps={{
             //   fullWidth: true
             // }}
-            onChange={(e) => {setEmail(e.target.value)}}
+            onChange={(e) => {setUsername(e.target.value)}}
             type="text"
             style={{margin: 10}}
           />
@@ -47,11 +58,14 @@ function LoginForm(params) {
             style={{margin: 10}}
           />
 
-          <NavLink to={(password && email) ? "/maps" : 0}>
-            <Button className="logInButton" variant="contained" color="secondary" disabled={(password && email) ? 0: 1} onClick={() => { console.log(email,password) }}/*className="form__custom-button"*/>
+          <NavLink to={(success) ? "/maps" : 0}>
+            <Button className="logInButton" variant="contained" color="secondary" 
+            disabled={(password && userName) ? 0: 1} onClick={() => authenticateUser()}>
               Log in
             </Button>
-          </NavLink>          
+          </NavLink>      
+          
+              
          
 
         </form>

@@ -34,7 +34,7 @@ function App() {
 
         {/* If no other path matches, redirect to /articles */}
         <Route path="*">
-          <Redirect to="/logIn" />
+          <Redirect to="/maps" />
         </Route>
       </Switch>
 
