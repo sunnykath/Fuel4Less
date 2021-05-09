@@ -17,10 +17,11 @@ export default function LogInPage() {
                 <NavBar />
             </nav>
             <h1> Fuel 4 Less</h1>
+            <h2> Admin Log In</h2>
             <LoginForm/>
             <NavLink to="/signUp">
                 <Button className="button" variant="contained" color="primary">
-                    Sign up as a Customer
+                    Sign up as Admin
                 </Button>
             </NavLink>
             {/* <Button className="button" variant="contained" color="primary">

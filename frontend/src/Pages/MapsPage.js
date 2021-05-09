@@ -33,33 +33,33 @@ export default function MapPage() {
   }, []);
 
    useEffect(() => {
-    console.log({ listStation });
+    console.log("original : ",{ listStation });
     navigator.geolocation.getCurrentPosition(success);
   }, [listStation]);
 
  useEffect(() => {
-  const stationPosition = {
-    lat: listStation[0].address[2], 
-    lng: listStation[0].address[3]
-  }
-  var minIdx, temp, min_distance, 
-  len = listStation.length;
-
-  min_distance = getDistance(currentPosition, stationPosition);
-  
-  for(var i = 0; i < len; i++){
-  minIdx = i;
-  for(var  j = i+1; j<len; j++){
-    if(getDistance(currentPosition, stationPosition) <min_distance){
-        minIdx = j;
+    const stationPosition = {
+      lat: listStation[0].address[2], 
+      lng: listStation[0].address[3]
     }
-  }
-  temp = listStation[i];
-  listStation[i] = listStation[minIdx];
-  listStation[minIdx] = temp;
-  }
+    var minIdx, temp, min_distance, 
+    len = listStation.length;
 
-    console.log(listStation);
+    min_distance = getDistance(currentPosition, stationPosition);
+    
+    for(var i = 0; i < len; i++){
+    minIdx = i;
+    for(var  j = i+1; j<len; j++){
+      if(getDistance(currentPosition, stationPosition) <min_distance){
+          minIdx = j;
+      }
+    }
+    temp = listStation[i];
+    listStation[i] = listStation[minIdx];
+    listStation[minIdx] = temp;
+    }
+
+    console.log("Modified : ", listStation);
   }, [listStation]);  
 
   var rad = function(x) {

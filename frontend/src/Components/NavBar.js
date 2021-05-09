@@ -1,4 +1,4 @@
-import { Button, List, ListItem, ListItemText, IconButton, SwipeableDrawer } from '@material-ui/core';
+import { Button, List, ListItem, ListItemText, IconButton, SwipeableDrawer, Typography, Card, CardContent } from '@material-ui/core';
 import MenuIcon from "@material-ui/icons/Menu"
 import React, { useState }  from 'react';
 
@@ -6,7 +6,6 @@ import { NavLink } from 'react-router-dom';
 import styles from './NavBar.module.css';
 
 export default function NavBar() {
-
 
     const [open, setOpen] = useState(false);
 
@@ -18,20 +17,62 @@ export default function NavBar() {
         };
     return (
         <div>
-            <IconButton onClick={toggleDrawer(true)}>
+            <div style={{
+                display: 'flex',
+                alignItems: 'left',
+                flexWrap: 'wrap',
+                paddingLeft: 20,
+            }}>
+                <IconButton onClick={toggleDrawer(true)} edge="start">
                 <MenuIcon/ >
             </IconButton>
+            </div>
+            
             <SwipeableDrawer
                 anchor={'left'}
                 open={open}
                 onClose={toggleDrawer(false)}
                 onOpen={toggleDrawer(true)}
-                onClick={toggleDrawer(false)}
-                >
-                <NavLink to="/logIn" activeClassName={styles.activeLink}>Log In</NavLink>
-                <NavLink to="/dashboard" activeClassName={styles.activeLink}>Dashboard</NavLink>
-                <NavLink to="/maps" activeClassName={styles.activeLink}>Map</NavLink>
-                <NavLink to="/signUp" activeClassName={styles.activeLink}>Sign Up</NavLink>
+                onClick={toggleDrawer(false)}>
+                    <Card >
+                        <CardContent >
+                            <NavLink to="/logIn" >
+                                <Typography variant="h7" component="h2" align="left" fontSize={10} color="textPrimary">
+                                    Log In
+                                </Typography>
+                            </NavLink>
+                        </CardContent>
+                    </Card>
+
+                    <Card >
+                        <CardContent >
+                            <NavLink to="/dashboard" >
+                                <Typography variant="h7" component="h2" align="left" fontSize={20} color="textPrimary">
+                                    Dashboard
+                                </Typography>
+                            </NavLink>
+                        </CardContent>
+                    </Card>
+
+                    <Card >
+                        <CardContent >
+                            <NavLink to="/maps" >
+                                <Typography variant="h7" component="h2" align="left" fontSize={20} color="textPrimary">
+                                    Map
+                                </Typography>
+                            </NavLink>
+                        </CardContent>
+                    </Card>
+
+                    <Card >
+                        <CardContent >
+                            <NavLink to="/signUp" >
+                                <Typography variant="h7" component="h2" align="left" fontSize={20} color="textPrimary">
+                                     Sign Up
+                                </Typography>
+                            </NavLink>
+                        </CardContent>
+                    </Card>
             </SwipeableDrawer>
         </div>
     );

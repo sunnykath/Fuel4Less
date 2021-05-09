@@ -32,7 +32,7 @@ function LoginForm(params) {
         <form className="form">
           
           <TextField
-            label="Usernmae"
+            label="Username"
             id="username"
             // formControlProps={{
             //   fullWidth: true
