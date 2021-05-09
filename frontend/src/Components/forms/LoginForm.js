@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {Button, Input, TextField} from "@material-ui/core";
+import axios from 'axios';
 
 import { NavLink } from 'react-router-dom';
 import "./LoginForm.css"
@@ -15,9 +16,8 @@ function LoginForm(params) {
   
   function authenticateUser() {
 
-    // Run a database query for email
-    
-
+    // Run a database query for username
+    const user = await axios.get()
     // Check Password
 
     // Redirect to Admin DashBoard
