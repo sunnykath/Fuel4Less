@@ -15,6 +15,10 @@ async function retrieveUser(id) {
     return await users.findById(id);
 }
 
+async function retrieveUserByUserName(username) {
+    return await users.find({username: username});
+}
+
 async function updateUser(user) {
     
     const dbUser = await users.findById(user._id);
@@ -39,6 +43,7 @@ export {
     createUser,
     retrieveUser,
     retrieveUserList,
+    retrieveUserByUserName,
     updateUser,
     deleteUser
 }

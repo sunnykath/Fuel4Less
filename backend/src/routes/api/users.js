@@ -10,6 +10,7 @@
      createUser,
      retrieveUser,
      retrieveUserList,
+     retrieveUserByUserName,
      updateUser,
      deleteUser
  } from '../../app-data/users-dao';
@@ -52,6 +53,19 @@ router.get('/:id', async (req, res) => {
     const { id } = req.params;
 
     const user = await retrieveUser(id);
+
+    if (user) {
+        res.json(user);
+    }
+    else {
+        res.sendStatus(HTTP_NOT_FOUND);
+    }
+});
+
+router.get('/:username', async(req, res) => {
+    const { username } = req.params;
+
+    const user = await retrieveUserByUserName(username);
 
     if (user) {
         res.json(user);
