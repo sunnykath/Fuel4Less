@@ -1,15 +1,13 @@
 import { CardMedia } from '@material-ui/core';
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import FavIcon from '../imgs/favicon.ico' 
-import GullLogo from '../imgs/gull.png'
-import ZLogo from '../imgs/z.png'
 import LocalCafeIcon from '@material-ui/icons/LocalCafe';
 import LocalCarWashIcon from '@material-ui/icons/LocalCarWash';
 import WcIcon from '@material-ui/icons/Wc';
+import axios from 'axios';
 
 const useStyles = makeStyles({
   root: {
@@ -44,13 +42,13 @@ const useStyles = makeStyles({
 
 function ListComponent({items}) {
   const classes = useStyles();
-
+  
   return(
     items ? items.map((item, index) =>
       <div key={index}>
         <Card className={classes.root} variant="outlined" >
           <CardMedia className={classes.media}
-              image={ZLogo}
+              image={"http://localhost:3000/" + item.displayPicture}
               title={item.name}
             />
           <div className={classes.details}> 
@@ -63,9 +61,9 @@ function ListComponent({items}) {
               ${item.price}
             </Typography>
             <div className={classes.iconDisplay} > 
-              <LocalCafeIcon className={classes.icon}/>
-              <LocalCarWashIcon className={classes.icon} color="disabled"/>
-              <WcIcon className={classes.icon} color="disabled"/>
+              <LocalCafeIcon className={classes.icon} color={item.amenities[0] ? "enable" : "disabled"}/>
+              <LocalCarWashIcon className={classes.icon} color={item.amenities[1] ? "enable" : "disabled"}/>
+              <WcIcon className={classes.icon} color={item.amenities[2] ? "enable" : "disabled"}/>
             </div>
           </CardContent>
           </div>
@@ -82,5 +80,7 @@ function ListComponent({items}) {
   )
 }
 
-
+//<LocalCafeIcon className={classes.icon} color={item.amenities[0] ? "enable" : "disabled"}/>
+//<LocalCarWashIcon className={classes.icon} color={item.amenities[1] ? "enable" : "disabled"}/>
+//<WcIcon className={classes.icon} color={item.amenities[2] ? "enable" : "disabled"}/>
 export default ListComponent;

@@ -15,6 +15,8 @@ function MapComponent(props) {
           lat: position.coords.latitude, 
           lng: position.coords.longitude
         }
+        console.log(currentPosition.lat, currentPosition.lng);
+
         setCurrentPosition(currentPosition);
     };
 
