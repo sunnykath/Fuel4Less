@@ -5,33 +5,39 @@ import { NavLink } from 'react-router-dom';
 import "./LoginForm.css"
 
 
-// import "./styles.css";
-// import CustomInput from "./components/CustomInput";
-// import Button from "./components/Button";
-
-// export default class LoginForm extends Component {
 
 function LoginForm(params) {
 
 
-  const [email, setEmail] = useState("");
+  const [userName, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  // handleChange = e => {
-  //   this.setcredentials({ [e.currentTarget.id]: e.currentTarget.value });
-  // };
+  
+  function authenticateUser() {
+
+    // Run a database query for email
+    
+
+    // Check Password
+
+    // Redirect to Admin DashBoard
+    
+  }
+
+
+  
 
     return (
       <div>
         <form className="form">
           
           <TextField
-            label="Email"
-            id="email"
+            label="Usernmae"
+            id="username"
             // formControlProps={{
             //   fullWidth: true
             // }}
-            onChange={(e) => {setEmail(e.target.value)}}
+            onChange={(e) => {setUsername(e.target.value)}}
             type="text"
             style={{margin: 10}}
           />
@@ -47,11 +53,14 @@ function LoginForm(params) {
             style={{margin: 10}}
           />
 
-          <NavLink to={(password && email) ? "/maps" : 0}>
-            <Button className="logInButton" variant="contained" color="secondary" disabled={(password && email) ? 0: 1} onClick={() => { console.log(email,password) }}/*className="form__custom-button"*/>
+          <NavLink to={(password && userName) ? "/maps" : 0}>
+            <Button className="logInButton" variant="contained" color="secondary" 
+            disabled={(password && userName) ? 0: 1} onClick={() => authenticateUser()}>
               Log in
             </Button>
-          </NavLink>          
+          </NavLink>      
+          
+              
          
 
         </form>

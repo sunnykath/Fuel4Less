@@ -1,0 +1,101 @@
+[{
+  "_id": {
+    "$oid": "6096135b2574f626bb6928c4"
+  },
+  "price": 2.65,
+  "address": [
+    "104 Fanshawe Street",
+    "Auckland",
+    -36.84602,
+    174.75918,
+    1010
+  ],
+  "name": "BP Fanshawe Street",
+  "displaypicture": "bp.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    false
+  ]
+},{
+  "_id": {
+    "$oid": "60961575ef80d3a3c38a5fdd"
+  },
+  "price": 2.65,
+  "address": [
+    "14 Quay Street",
+    "Auckland",
+    -36.84765,
+    174.78062,
+    1010
+  ],
+  "name": "Mobil Quay Street",
+  "displaypicture": "mobil.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    true
+  ]
+},{
+  "_id": {
+    "$oid": "609615b5ef80d3a3c38a5fde"
+  },
+  "price": 2.65,
+  "address": [
+    "27 Quay Street",
+    "Auckland",
+    -36.84461,
+    174.77345,
+    1010
+  ],
+  "name": "Z Quay Street",
+  "displaypicture": "z.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    false
+  ]
+},{
+  "_id": {
+    "$oid": "609615fbef80d3a3c38a5fdf"
+  },
+  "price": 2.65,
+  "address": [
+    "476 Broadway",
+    "Auckland",
+    -36.8754606,
+    174.7772042,
+    1023
+  ],
+  "name": "Caltex Newmarket",
+  "displaypicture": "caltex.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    false
+  ]
+},{
+  "_id": {
+    "$oid": "60961653ef80d3a3c38a5fe0"
+  },
+  "price": 2.65,
+  "address": [
+    "384 New North Road",
+    "Auckland",
+    -36.87052536010742,
+    174.74827575683594,
+    1021
+  ],
+  "name": "Gull Kingsland",
+  "displaypicture": "gull.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    false
+  ]
+}]

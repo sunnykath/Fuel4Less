@@ -5,12 +5,22 @@ import mongoose from 'mongoose';
 // Setup Express
 const app = express();
 const port = process.env.PORT || 3001;
+// ADD THIS
+var cors = require('cors');
+app.use(cors());
+
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 
 // Setup body-parser
 app.use(express.json());
 
+
 // Setup our routes.
 import routes from './routes';
+import connectToDatabase from './app-data/dbConnect';
+
 app.use('/', routes);
 
 // Make the "public" folder available statically
@@ -29,6 +39,9 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-// Start the DB running. Then, once it's connected, start the server.
-mongoose.connect('mongodb://localhost:27017/blogogog', { useNewUrlParser: true })
+connectToDatabase()
     .then(() => app.listen(port, () => console.log(`App server listening on port ${port}!`)));
+
+// Start the DB running. Then, once it's connected, start the server.
+// mongoose.connect('mongodb://localhost:27017/f4l', { useNewUrlParser: true })
+//     .then(() => app.listen(port, () => console.log(`App server listening on port ${port}!`)));

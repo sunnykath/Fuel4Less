@@ -11,9 +11,8 @@ const petrolStationSchema = new mongoose.Schema({
         latitude: Number,
         longitude: Number,
         postCode: Number,
-        required: true,
-        unique: true,
     },
+
     name: {
         type: String,
         required: true,
@@ -35,4 +34,8 @@ const petrolStationSchema = new mongoose.Schema({
 
 });
 
-module.exports = mongoose.model("petrolStations", petrolStationSchema);
+const petrolStations = mongoose.model('PetrolStations', petrolStationSchema);
+
+export { petrolStations };
+
+// module.exports = mongoose.model("PetrolStations", petrolStationSchema);

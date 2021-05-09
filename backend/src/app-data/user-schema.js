@@ -23,14 +23,16 @@ const userSchema = new mongoose.Schema({
         type: String,
     },
 
-    canUpdatePrice: {
-        type: Boolean,
-        required: true
-    },
+    // canUpdatePrice: {
+    //     type: Boolean,
+    //     // required: true
+    // },
 
     petrolStations: {
         type: [String]
     }
 });
 
-module.exports = mongoose.model("users", userSchema);
+const users = mongoose.model('users', userSchema);
+
+export { users };
