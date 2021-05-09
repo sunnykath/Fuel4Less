@@ -34,8 +34,8 @@ const petrolStationSchema = new mongoose.Schema({
 
 });
 
-const petrolStations = mongoose.model('petrolStations', petrolStationSchema);
+const petrolStations = mongoose.model('PetrolStations', petrolStationSchema);
 
 export { petrolStations };
 
-// module.exports = mongoose.model("petrolStations", petrolStationSchema);
+// module.exports = mongoose.model("PetrolStations", petrolStationSchema);

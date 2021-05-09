@@ -30,9 +30,9 @@ router.post('/', async (req, res) => {
         email: req.body.email,
         username: req.body.username,
         password: req.body.password,
-        displayPicture: req.body.displayPicture,
-        canUpdatePrice: req.body.canUpdatePrice,
-        petrolStation: req.body.petrolStation
+        // displayPicture: req.body.displayPicture,
+        // canUpdatePrice: req.body.canUpdatePrice,
+        // petrolStation: req.body.petrolStation
     });
 
     res.status(HTTP_CREATED)
