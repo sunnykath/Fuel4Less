@@ -7,16 +7,12 @@ async function createUser(user) {
     return dbUser;
 }
 
-async function retrieveUserList() {
-    return await users.find();
+async function retrieveUserList(query) {
+    return await users.find(query);
 }
 
 async function retrieveUser(id) {
     return await users.findById(id);
-}
-
-async function retrieveUserByUserName(username) {
-    return await users.findOne({username: username.value});
 }
 
 async function updateUser(user) {

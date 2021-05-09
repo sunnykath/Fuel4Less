@@ -43,8 +43,8 @@ router.post('/', async (req, res) => {
 
 // Retrieve all users
 router.get('/', async (req, res) => {
-
-    res.json(await retrieveUserList());
+    
+    res.json(await retrieveUserList(req.query));
 
 });
 
@@ -62,18 +62,6 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-router.get('/:username', async(req, res) => {
-    const { username } = req.params;
-
-    const user = await retrieveUserByUserName(username);
-
-    if (user) {
-        res.json(user);
-    }
-    else {
-        res.sendStatus(HTTP_NOT_FOUND);
-    }
-});
 
 // Update user
 router.put('/:id', async (req, res) => {
