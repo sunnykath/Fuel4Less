@@ -11,7 +11,7 @@
     1010
   ],
   "name": "BP Fanshawe Street",
-  "displaypicture": "bp.png",
+  "displaypicture": "bp.jpg",
   "discount": "10",
   "amenities": [
     true,
@@ -31,7 +31,7 @@
     1010
   ],
   "name": "Mobil Quay Street",
-  "displaypicture": "mobil.png",
+  "displaypicture": "mobil.jpg",
   "discount": "10",
   "amenities": [
     true,
@@ -51,7 +51,7 @@
     1010
   ],
   "name": "Z Quay Street",
-  "displaypicture": "z.png",
+  "displaypicture": "z.jpg",
   "discount": "10",
   "amenities": [
     true,
@@ -71,7 +71,7 @@
     1023
   ],
   "name": "Caltex Newmarket",
-  "displaypicture": "caltex.png",
+  "displaypicture": "caltex.jpg",
   "discount": "10",
   "amenities": [
     true,
@@ -91,11 +91,411 @@
     1021
   ],
   "name": "Gull Kingsland",
-  "displaypicture": "gull.png",
+  "displaypicture": "gull.jpg",
   "discount": "10",
   "amenities": [
     true,
     true,
     false
+  ]
+},{
+  "_id": {
+    "$oid": "6097355b8a1c6b54a59556ad"
+  },
+  "price": "2.75",
+  "address": [
+    "60 Greenlane East Road",
+    "Auckland",
+    -36.886024475097656,
+    174.80209350585938,
+    1050
+  ],
+  "name": "Mobil Greenlane",
+  "displaypicture": "mobil.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    true
+  ]
+},{
+  "_id": {
+    "$oid": "60973683787ecaa8a2ae43b1"
+  },
+  "price": "2.67",
+  "address": [
+    "434 Ellerslie Panmure Highway",
+    "Auckland",
+    -36.89620590209961,
+    174.83731079101562,
+    1060
+  ],
+  "name": "Z Panmure",
+  "displaypicture": "z.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    false
+  ]
+},{
+  "_id": {
+    "$oid": "609736f0787ecaa8a2ae43b2"
+  },
+  "price": "2.83",
+  "address": [
+    "3 Reeves Road",
+    "Auckland",
+    -36.9147317,
+    174.8714847,
+    2010
+  ],
+  "name": "Gull Pakuranga",
+  "displaypicture": "gull.png",
+  "discount": "10",
+  "amenities": [
+    false,
+    false,
+    false
+  ]
+},{
+  "_id": {
+    "$oid": "6097374d787ecaa8a2ae43b3"
+  },
+  "price": "2.68",
+  "address": [
+    "2 Bishop Lenihan Place",
+    "Auckland",
+    -36.96233367919922,
+    174.900390625,
+    2013
+  ],
+  "name": "Mobil Ormiston",
+  "displaypicture": "mobil.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    true
+  ]
+},{
+  "_id": {
+    "$oid": "60973793787ecaa8a2ae43b4"
+  },
+  "price": "2.82",
+  "address": [
+    "180 Moore Street",
+    "Auckland",
+    -36.9033719,
+    174.9271447,
+    2014
+  ],
+  "name": "Gas Howick",
+  "displaypicture": "gas.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    false
+  ]
+},{
+  "_id": {
+    "$oid": "609737d3787ecaa8a2ae43b5"
+  },
+  "price": "2.82",
+  "address": [
+    "700 Mount Albert Road",
+    "Auckland",
+    -36.91205978393555,
+    174.7605438232422,
+    1023
+  ],
+  "name": "Z Royal Oak",
+  "displaypicture": "z.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    true
+  ]
+},{
+  "_id": {
+    "$oid": "6097382d787ecaa8a2ae43b6"
+  },
+  "price": "2.96",
+  "address": [
+    "1 Coronation Road",
+    "Auckland",
+    -36.9395919,
+    174.7867128,
+    2022
+  ],
+  "name": "Gas Mangere",
+  "displaypicture": "gas.png",
+  "discount": "10",
+  "amenities": [
+    false,
+    false,
+    false
+  ]
+},{
+  "_id": {
+    "$oid": "60973888787ecaa8a2ae43b7"
+  },
+  "price": "2.78",
+  "address": [
+    "652 Great South Road",
+    "Auckland",
+    -36.9791835,
+    174.8741046,
+    2025
+  ],
+  "name": "Caltex Cavendish",
+  "displaypicture": "caltex.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    false
+  ]
+},{
+  "_id": {
+    "$oid": "609738c6787ecaa8a2ae43b8"
+  },
+  "price": "2.80",
+  "address": [
+    "1 Alfriston Road",
+    "Auckland",
+    -37.0236558,
+    174.8996424,
+    2102
+  ],
+  "name": "Z Manurewa",
+  "displaypicture": "z.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    false
+  ]
+},{
+  "_id": {
+    "$oid": "6097391b787ecaa8a2ae43b9"
+  },
+  "price": "2.91",
+  "address": [
+    "354 Porchester Road",
+    "Auckland",
+    -37.030521392822266,
+    174.92652893066406,
+    2105
+  ],
+  "name": "Mobil Takanini",
+  "displaypicture": "mobil.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    true
+  ]
+},{
+  "_id": {
+    "$oid": "6097396c787ecaa8a2ae43ba"
+  },
+  "price": "2.73",
+  "address": [
+    "770 New North Road",
+    "Auckland",
+    -36.87983703613281,
+    174.72613525390625,
+    1025
+  ],
+  "name": "Z Mount Albert",
+  "displaypicture": "z.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    false
+  ]
+},{
+  "_id": {
+    "$oid": "609739ef787ecaa8a2ae43bb"
+  },
+  "price": "2.79",
+  "address": [
+    "56 Stoddard Road",
+    "Auckland",
+    -36.9078068,
+    174.7349022,
+    1041
+  ],
+  "name": "Gas Mount Roskill",
+  "displaypicture": "gas.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    false
+  ]
+},{
+  "_id": {
+    "$oid": "60973ac9787ecaa8a2ae43bc"
+  },
+  "price": "2.86",
+  "address": [
+    "523 Clark Street",
+    "Auckland",
+    -36.910685,
+    174.6906432,
+    600
+  ],
+  "name": "Gull Portage Road",
+  "displaypicture": "gull.png",
+  "discount": "10",
+  "amenities": [
+    false,
+    false,
+    false
+  ]
+},{
+  "_id": {
+    "$oid": "60973c58787ecaa8a2ae43bd"
+  },
+  "price": "2.61",
+  "address": [
+    "Norcross Avenue",
+    "Auckland",
+    -36.8821161,
+    174.6412124,
+    610
+  ],
+  "name": "BP Glendene",
+  "displaypicture": "bp.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    true
+  ]
+},{
+  "_id": {
+    "$oid": "60973ca9787ecaa8a2ae43be"
+  },
+  "price": "2.69",
+  "address": [
+    "505 Blockhouse Bay Road",
+    "Auckland",
+    -36.922477,
+    174.7012379,
+    600
+  ],
+  "name": "Caltex Blockhouse Bay",
+  "displaypicture": "caltex.png",
+  "discount": "10",
+  "amenities": [
+    false,
+    false,
+    false
+  ]
+},{
+  "_id": {
+    "$oid": "60973d11787ecaa8a2ae43bf"
+  },
+  "price": "2.67",
+  "address": [
+    "67 Onewa Road",
+    "Auckland",
+    -36.8109514,
+    174.7438969,
+    627
+  ],
+  "name": "BP Onewa Road",
+  "displaypicture": "bp.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    false
+  ]
+},{
+  "_id": {
+    "$oid": "60973d5f787ecaa8a2ae43c0"
+  },
+  "price": "2.78",
+  "address": [
+    "114 Anzac Street",
+    "Auckland",
+    -36.786773681640625,
+    174.77108764648438,
+    622
+  ],
+  "name": "Mobil Takapuna",
+  "displaypicture": "mobil.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    true
+  ]
+},{
+  "_id": {
+    "$oid": "60973dd7787ecaa8a2ae43c1"
+  },
+  "price": "2.74",
+  "address": [
+    "260 Beach Haven Road",
+    "Auckland",
+    -36.787715911865234,
+    174.70021057128906,
+    626
+  ],
+  "name": "Caltex Birkdale",
+  "displaypicture": "caltex.png",
+  "discount": "10",
+  "amenities": [
+    false,
+    true,
+    false
+  ]
+},{
+  "_id": {
+    "$oid": "60973e32787ecaa8a2ae43c2"
+  },
+  "price": "2.91",
+  "address": [
+    "39 Chartwell Avenue",
+    "Auckland",
+    -36.7829106,
+    174.7313349,
+    629
+  ],
+  "name": "Gas Chartwell",
+  "displaypicture": "gas.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    false
+  ]
+},{
+  "_id": {
+    "$oid": "60973e73787ecaa8a2ae43c3"
+  },
+  "price": "2.82",
+  "address": [
+    "127 Wairau Road",
+    "Auckland",
+    -36.7800529,
+    174.7499322,
+    627
+  ],
+  "name": "BP Wairau Road",
+  "displaypicture": "bp.png",
+  "discount": "10",
+  "amenities": [
+    true,
+    true,
+    true
   ]
 }]
