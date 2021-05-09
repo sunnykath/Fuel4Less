@@ -22,7 +22,7 @@
   "_id": {
     "$oid": "60961575ef80d3a3c38a5fdd"
   },
-  "price": 2.65,
+  "price": 2.78,
   "address": [
     "14 Quay Street",
     "Auckland",
@@ -42,7 +42,7 @@
   "_id": {
     "$oid": "609615b5ef80d3a3c38a5fde"
   },
-  "price": 2.65,
+  "price": 2.68,
   "address": [
     "27 Quay Street",
     "Auckland",
@@ -62,7 +62,7 @@
   "_id": {
     "$oid": "609615fbef80d3a3c38a5fdf"
   },
-  "price": 2.65,
+  "price": 2.84,
   "address": [
     "476 Broadway",
     "Auckland",
@@ -82,7 +82,7 @@
   "_id": {
     "$oid": "60961653ef80d3a3c38a5fe0"
   },
-  "price": 2.65,
+  "price": 2.79,
   "address": [
     "384 New North Road",
     "Auckland",
@@ -102,7 +102,7 @@
   "_id": {
     "$oid": "6097355b8a1c6b54a59556ad"
   },
-  "price": "2.75",
+  "price": 2.75,
   "address": [
     "60 Greenlane East Road",
     "Auckland",
@@ -122,7 +122,7 @@
   "_id": {
     "$oid": "60973683787ecaa8a2ae43b1"
   },
-  "price": "2.67",
+  "price": 2.67,
   "address": [
     "434 Ellerslie Panmure Highway",
     "Auckland",
@@ -142,7 +142,7 @@
   "_id": {
     "$oid": "609736f0787ecaa8a2ae43b2"
   },
-  "price": "2.83",
+  "price": 2.83,
   "address": [
     "3 Reeves Road",
     "Auckland",
@@ -162,7 +162,7 @@
   "_id": {
     "$oid": "6097374d787ecaa8a2ae43b3"
   },
-  "price": "2.68",
+  "price": 2.68,
   "address": [
     "2 Bishop Lenihan Place",
     "Auckland",
@@ -182,7 +182,7 @@
   "_id": {
     "$oid": "60973793787ecaa8a2ae43b4"
   },
-  "price": "2.82",
+  "price": 2.82,
   "address": [
     "180 Moore Street",
     "Auckland",
@@ -202,7 +202,7 @@
   "_id": {
     "$oid": "609737d3787ecaa8a2ae43b5"
   },
-  "price": "2.82",
+  "price": 2.82,
   "address": [
     "700 Mount Albert Road",
     "Auckland",
@@ -222,7 +222,7 @@
   "_id": {
     "$oid": "6097382d787ecaa8a2ae43b6"
   },
-  "price": "2.96",
+  "price": 2.96,
   "address": [
     "1 Coronation Road",
     "Auckland",
@@ -242,7 +242,7 @@
   "_id": {
     "$oid": "60973888787ecaa8a2ae43b7"
   },
-  "price": "2.78",
+  "price": 2.78,
   "address": [
     "652 Great South Road",
     "Auckland",
@@ -262,7 +262,7 @@
   "_id": {
     "$oid": "609738c6787ecaa8a2ae43b8"
   },
-  "price": "2.80",
+  "price": 2.8,
   "address": [
     "1 Alfriston Road",
     "Auckland",
@@ -282,7 +282,7 @@
   "_id": {
     "$oid": "6097391b787ecaa8a2ae43b9"
   },
-  "price": "2.91",
+  "price": 2.91,
   "address": [
     "354 Porchester Road",
     "Auckland",
@@ -302,7 +302,7 @@
   "_id": {
     "$oid": "6097396c787ecaa8a2ae43ba"
   },
-  "price": "2.73",
+  "price": 2.73,
   "address": [
     "770 New North Road",
     "Auckland",
@@ -322,7 +322,7 @@
   "_id": {
     "$oid": "609739ef787ecaa8a2ae43bb"
   },
-  "price": "2.79",
+  "price": 2.79,
   "address": [
     "56 Stoddard Road",
     "Auckland",
@@ -342,7 +342,7 @@
   "_id": {
     "$oid": "60973ac9787ecaa8a2ae43bc"
   },
-  "price": "2.86",
+  "price": 2.86,
   "address": [
     "523 Clark Street",
     "Auckland",
@@ -362,7 +362,7 @@
   "_id": {
     "$oid": "60973c58787ecaa8a2ae43bd"
   },
-  "price": "2.61",
+  "price": 2.61,
   "address": [
     "Norcross Avenue",
     "Auckland",
@@ -382,7 +382,7 @@
   "_id": {
     "$oid": "60973ca9787ecaa8a2ae43be"
   },
-  "price": "2.69",
+  "price": 2.69,
   "address": [
     "505 Blockhouse Bay Road",
     "Auckland",
@@ -402,7 +402,7 @@
   "_id": {
     "$oid": "60973d11787ecaa8a2ae43bf"
   },
-  "price": "2.67",
+  "price": 2.67,
   "address": [
     "67 Onewa Road",
     "Auckland",
@@ -422,7 +422,7 @@
   "_id": {
     "$oid": "60973d5f787ecaa8a2ae43c0"
   },
-  "price": "2.78",
+  "price": 2.78,
   "address": [
     "114 Anzac Street",
     "Auckland",
@@ -442,7 +442,7 @@
   "_id": {
     "$oid": "60973dd7787ecaa8a2ae43c1"
   },
-  "price": "2.74",
+  "price": 2.74,
   "address": [
     "260 Beach Haven Road",
     "Auckland",
@@ -462,7 +462,7 @@
   "_id": {
     "$oid": "60973e32787ecaa8a2ae43c2"
   },
-  "price": "2.91",
+  "price": 2.91,
   "address": [
     "39 Chartwell Avenue",
     "Auckland",
@@ -482,7 +482,7 @@
   "_id": {
     "$oid": "60973e73787ecaa8a2ae43c3"
   },
-  "price": "2.82",
+  "price": 2.82,
   "address": [
     "127 Wairau Road",
     "Auckland",
