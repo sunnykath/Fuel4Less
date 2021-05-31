@@ -21,11 +21,11 @@ async function updatePetrolStation(petrolStation) {
     const dbPetrolStation = await petrolStations.findById(petrolStation._id);
     if (dbPetrolStation) {
 
-        dbPetrolStation.price = petrolStations.price;
-        dbPetrolStation.address = petrolStations.address;
-        dbPetrolStation.name = petrolStations.name;
-        dbPetrolStation.displayPicture = petrolStations.displayPicture;
-        dbPetrolStation.amenities = petrolStations.amenities;
+        dbPetrolStation.price = petrolStation.price;
+        dbPetrolStation.address[0] = petrolStation.address[0];
+        dbPetrolStation.name = petrolStation.name;
+        dbPetrolStation.displayPicture = petrolStation.displayPicture;
+        dbPetrolStation.amenities[0] = petrolStation.amenities[0];
 
         await dbPetrolStation.save();
         return true;

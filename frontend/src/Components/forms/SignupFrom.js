@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {Button, Input, TextField} from "@material-ui/core";
-import { Redirect } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import "./LoginForm.css"
 import axios from "axios";
 
@@ -13,6 +13,7 @@ var email_valid = true;
 function SignupForm(params) {
 
   const [state, setState] = useState(0);
+  const [success, setSuccess] = useState(0);
 
   const newUser = {
     name: {type: String, value: ""},
@@ -36,11 +37,12 @@ function SignupForm(params) {
       // Create a new user
       if (email_valid) {
         axios.post("http://localhost:3001/api/users", newUser)
-        .then(res => {console.log(res)})
-        .catch(err => console.log(err));
+        .then(res => {console.log(res); setSuccess(1)})
+        .catch(err => {console.log(err); setSuccess(0)});
       } else {
         setState(state+1);
-        console.log("Invalid Email", newUser.email)
+        console.log("Invalid Email", newUser.email);
+        setSuccess(0);
       }
 
     });
@@ -97,11 +99,12 @@ function SignupForm(params) {
           type="password"
           style={{margin: 10}}
       />
-
-      <Button className="logInButton" variant="contained" color="secondary" 
-        onClick={() => createNewUser() }>
-        Sign up
-      </Button>
+      <NavLink to={(success) ? "/dashboard" : 0}>
+        <Button className="logInButton" variant="contained" color="secondary" 
+          onClick={() => createNewUser() }>
+          Sign up
+        </Button>
+      </NavLink>
 
       </form>
     </div>

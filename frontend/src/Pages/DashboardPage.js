@@ -12,7 +12,7 @@ export default function DashboardPage() {
                 Kia Ora 
             </List>
 
-            <DashboardForm>
+            <DashboardForm >
             </DashboardForm>
 
         </div>
