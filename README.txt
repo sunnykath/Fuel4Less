@@ -27,7 +27,7 @@ Run npm start or click on the start - backend under NPM SCRIPTS, backend\package
 Deployment from VSCode:
 
 Click File -> Open folder...
-Navigate to the folder where CreamCat is located
+Navigate to the folder where "se750-2021-group4" directory is located
 Click open folder
 Frontend and backend folders should be present in working directory
 

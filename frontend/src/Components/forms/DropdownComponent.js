@@ -1,10 +1,10 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-//import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -16,13 +16,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function DropdownComponent() {
+export default function DropdownComponent(props) {
   const classes = useStyles();
-  const [stations, setStations] = React.useState('');
 
-  const handleChange = (event) => {
-    setStations(event.target.value);
-  };
+  const {station , stationsList, handleChange} = props;
 
   return (
     <div>
@@ -31,12 +28,17 @@ export default function DropdownComponent() {
         <Select
           labelId="DropdownComponent"
           id="DropdownComponent"
-          value={stations}
+          value={station.name}
           onChange={handleChange}
         >
-          <MenuItem value={'Z Quay'}>Z Quay</MenuItem>
+        {stationsList.map((station) => (
+          <MenuItem key={station.name} value={station.name}>
+            {station.name}
+          </MenuItem>
+        ))}
+          {/* <MenuItem value={'Z Quay'}>Z Quay</MenuItem>
           <MenuItem value={'Z Panmure'}>Z Panmure</MenuItem>
-          <MenuItem value={'Z Royal Oak'}>Z Royal Oak</MenuItem>
+          <MenuItem value={'Z Royal Oak'}>Z Royal Oak</MenuItem> */}
         </Select>
       </FormControl>
       

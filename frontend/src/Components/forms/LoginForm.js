@@ -58,7 +58,7 @@ function LoginForm(params) {
             style={{margin: 10}}
           />
 
-          <NavLink to={(success) ? "/maps" : 0}>
+          <NavLink to={(success) ? "/dashboard" : 0}>
             <Button className="logInButton" variant="contained" color="secondary" 
             disabled={(password && userName) ? 0: 1} onClick={() => authenticateUser()}>
               Log in
