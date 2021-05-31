@@ -14,19 +14,7 @@ export default function MapPage() {
   const [listStation, setList] = useState(initListStation);
   const [ currentPosition, setCurrentPosition ] = useState({});
 
-  const callbackArray = [
-    { name: 'Papatoetoe Z', price: 2.10 , lat: 10, long: 10},
-    { name: 'Papatoetoe Gas', price: 1.90 , lat: 1, long: 1},
-    { name: 'Papatoetoe Gull', price: 1.85 , lat: 4, long: 4},
-    { name: 'Papatoetoe Mobile', price: 2.10 , lat: 5, long: 5},
-    { name: 'Otahuhu Mobil', price: 2.05 , lat: 3, long: 3},
-    { name: 'Otahuhu Caltex', price: 2.00 , lat: 7, long: 7},
-    { name: 'Otara Gas', price: 1.95 , lat: 2, long: 2},
-    { name: 'Otara Mobil', price: 1.80 , lat: 8, long: 8},
-    { name: 'Manukau Mobil', price: 2.30 , lat: 9, long: 9},
-    { name: 'Manukau Z', price: 2.45 , lat: 6, long: 6}
-  ];
-  
+  //let sortedStations = [];
   useEffect(() => {
     axios.get("http://localhost:3001/api/stations")
   .then(res => setList(res.data));
@@ -38,30 +26,29 @@ export default function MapPage() {
   }, [listStation]);
 
  useEffect(() => {
-    const stationPosition = {
-      lat: listStation[0].address[2], 
-      lng: listStation[0].address[3]
-    }
-    var minIdx, temp, min_distance, 
-    len = listStation.length;
-
-    min_distance = getDistance(currentPosition, stationPosition);
-    
-    for(var i = 0; i < len; i++){
-    minIdx = i;
-    for(var  j = i+1; j<len; j++){
-      if(getDistance(currentPosition, stationPosition) <min_distance){
-          minIdx = j;
+    var len = listStation.length;
+        
+    //sortedStations = listStation;
+    let distance = -1;
+    // get distances 
+    for (var i = 0; i < len; i++)
+    {
+      let temp = {
+        lat: listStation[i].address[2],
+        lng: listStation[i].address[3]
       }
+      distance = getDistance(currentPosition, temp);
+      listStation[i] = {...listStation[i], distance: distance}
     }
-    temp = listStation[i];
-    listStation[i] = listStation[minIdx];
-    listStation[minIdx] = temp;
-    }
+
+    // sort distances
+    listStation.sort(function(a, b){
+      return a.distance-b.distance
+    })
 
     console.log("Modified : ", listStation);
   }, [listStation]);  
-
+  
   var rad = function(x) {
     return x * Math.PI / 180;
   };

@@ -32,8 +32,8 @@ function MapComponent(props) {
             style={mapStyles}
             center={
                 {
-                    lat: currentPosition.lat,
-                    lng: currentPosition.lng
+                  lat: currentPosition.lat,
+                  lng: currentPosition.lng
                 }
             }
             onGoogleApiLoaded={({ map, maps }) => this.renderMarker(map, maps)}
