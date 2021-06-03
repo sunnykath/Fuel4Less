@@ -58,6 +58,9 @@ function ListComponent({items}) {
             <Typography className={classes.title} variant="h7" component="h2" align="left">
               {item.name}
             </Typography>
+            <Typography className={classes.pos} variant="h7" component="h2" align="right" color="textSecondary">
+              {item.distance} km
+            </Typography>
             <Typography className={classes.pos} variant="h4" component="h2" align="left" color="textSecondary">
               ${item.price}
             </Typography>
