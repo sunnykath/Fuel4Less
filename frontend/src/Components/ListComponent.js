@@ -16,6 +16,8 @@ const useStyles = makeStyles({
   },
   title: {
     fontSize: 20,
+    flexGrow: 1
+    // display: 'inline-block'
   },
   pos: {
     marginBottom: 0,
@@ -55,9 +57,14 @@ function ListComponent({items}) {
           <div className={classes.details}> 
           <CardContent >
           
-            <Typography className={classes.title} variant="h7" component="h2" align="left">
-              {item.name}
-            </Typography>
+            <div style={{display:"flex"}}>
+              <Typography display="inline" className={classes.title} variant="h7" component="h2" align="left">
+                {item.name}
+              </Typography>
+              <Typography display="inline" className={classes.pos} variant="h7" component="h2" align="right" color="textSecondary">
+                {item.distance} km
+              </Typography>
+            </div>
             <Typography className={classes.pos} variant="h4" component="h2" align="left" color="textSecondary">
               ${item.price}
             </Typography>

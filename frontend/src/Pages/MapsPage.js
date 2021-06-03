@@ -37,7 +37,7 @@ export default function MapPage() {
         lat: listStation[i].address[2],
         lng: listStation[i].address[3]
       }
-      distance = getDistance(currentPosition, temp);
+      distance = ((getDistance(currentPosition, temp))/1000).toFixed(1);
       listStation[i] = {...listStation[i], distance: distance}
     }
 
